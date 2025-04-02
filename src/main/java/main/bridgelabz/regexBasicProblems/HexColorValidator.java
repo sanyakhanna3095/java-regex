@@ -9,9 +9,9 @@ public class HexColorValidator {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter a hex color code: ");
-        String HexCode = sc.nextLine();
+        String s = sc.nextLine();
 
-        if (isValid(HexCode)) {
+        if (isValid(s)) {
             System.out.println("Valid!");
         }
         else {
@@ -21,9 +21,9 @@ public class HexColorValidator {
     }
 
     // method to check if string is valid hex color code or not
-    public static boolean isValid(String HexCode){
+    public static boolean isValid(String s){
         String regex="^#([A-Fa-f0-9]{6})$";
-        return Pattern.matches(regex,HexCode);
+        return Pattern.matches(regex,s);
     }
 }
 
